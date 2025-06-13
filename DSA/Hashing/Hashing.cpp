@@ -69,20 +69,35 @@ using namespace std;
 */
  
 
-int main() {
-    string s = "hello world";
-    unordered_map<char, int> freq;
+// int main() {
+//     string s = "hello world";
+//     unordered_map<char, int> freq;
 
-    // Count character frequency using hashing
-    for (char c : s) {
-        if (c != ' ') // skip spaces
-            freq[c]++;
-    }
+//     // Count character frequency using hashing
+//     for (char c : s) {
+//         if (c != ' ') // skip spaces
+//             freq[c]++;
+//     }
 
-    // Print frequencies
-    for (auto pair : freq) {
-        cout << pair.first << " => " << pair.second << endl;
-    }
+//     // Print frequencies
+//     for (auto pair : freq) {
+//         cout << pair.first << " => " << pair.second << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+/*
+Hashing has minimum time complexity than other in (searchin, inserting, deleting)
+In other the time complexity is like o(n)
+but by using this hashing method we can do all the in o(1) time
+Normal way to find num%10=? is the index no where the element found at that index
+load factor=no of element/size of table
+To remove this collison
+1. Linear Probing: H(k)=(k+i)%10
+2. Quadratic Probing: H(k)=(k+i^2)%10
+3. Double Hashing: (H^1(k)+i*H^2(k)) %10
+4. (H^1(k)=k%5    i*H^2(k))=k%6
+*/
+
