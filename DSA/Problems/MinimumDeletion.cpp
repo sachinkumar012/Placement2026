@@ -5,10 +5,10 @@ class Solution {
 public:
     int minimumDeletions(string word, int k) {
         unordered_map<char, int> freqMap;
-        for (char c : word) freqMap[c]++; ,
+        for (char c : word) freqMap[c]++; 
 
         vector<int> freqs;
-        for (auto &[ch, f] : freqMap) freqs.push_back(f);
+        // for (auto &[ch, f] : freqMap) freqs.push_back(f);
 
         sort(freqs.begin(), freqs.end());
 
