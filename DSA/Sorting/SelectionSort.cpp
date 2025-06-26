@@ -28,3 +28,5 @@ int main(){
     }
     return 0;
 }
+
+// Time complexity: o(n^2)
